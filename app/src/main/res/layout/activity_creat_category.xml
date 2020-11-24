@@ -18,7 +18,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Category Name"
-            android:textSize="@dimen/size_normal"/>
+            android:textSize="@dimen/size_normal"
+            android:fontFamily="@font/balsamiq_sans_bold"
+            />
+
         <EditText
             android:layout_margin="@dimen/_3sdp"
             android:padding="@dimen/_15sdp"
@@ -41,7 +44,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Category Banner"
-            android:textSize="@dimen/size_normal"/>
+            android:textSize="@dimen/size_normal"
+            android:fontFamily="@font/balsamiq_sans_bold"
+            />
 
         <RelativeLayout
             android:layout_margin="@dimen/_3sdp"
@@ -87,7 +92,9 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Tap to upload banner"
-                    android:textSize="@dimen/size_normal" />
+                    android:textSize="@dimen/size_normal"
+                    android:fontFamily="@font/balsamiq_sans_regular"
+                    />
 
             </LinearLayout>
         </RelativeLayout>
@@ -98,7 +105,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Category Thumbnail"
-            android:textSize="@dimen/size_normal"/>
+            android:textSize="@dimen/size_normal"
+            android:fontFamily="@font/balsamiq_sans_bold"
+            />
 
 
         <RelativeLayout
@@ -146,7 +155,9 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Tap to upload"
-                    android:textSize="@dimen/size_normal" />
+                    android:textSize="@dimen/size_normal"
+                    android:fontFamily="@font/balsamiq_sans_regular"
+                    />
 
             </LinearLayout>
         </RelativeLayout>
@@ -157,7 +168,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Status"
-            android:textSize="@dimen/size_normal"/>
+            android:textSize="@dimen/size_normal"
+            android:fontFamily="@font/balsamiq_sans_bold"
+            />
 
         <androidx.cardview.widget.CardView
             android:layout_margin="@dimen/_3sdp"
@@ -185,6 +198,7 @@
             android:textSize="@dimen/size_normal"
             android:text="SUBMIT"
             android:textColor="@color/colorWhite"
-            android:textStyle="bold" />
+            android:fontFamily="@font/balsamiq_sans_bold"
+            />
     </LinearLayout>
 </ScrollView>

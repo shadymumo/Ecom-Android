@@ -11,6 +11,7 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.drawerlayout.widget.DrawerLayout;
@@ -25,6 +26,8 @@ import com.maq.ecom.R;
 import com.maq.ecom.database.SessionManager;
 import com.maq.ecom.helper.Utils;
 import com.theartofdev.edmodo.cropper.CropImage;
+
+import de.hdodenhof.circleimageview.CircleImageView;
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
@@ -65,8 +68,10 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
         //inflating nav header layout
         View headerView = navigationView.getHeaderView(0);
+        CircleImageView iv_photo = headerView.findViewById(R.id.nav_header_civ_photo);
         TextView tv_userName = headerView.findViewById(R.id.nav_header_name);
         TextView tv_userMobile = headerView.findViewById(R.id.nav_header_mob);
+        Utils.loadProfileImage(context, sessionManager.getProfileImg(), iv_photo);
         tv_userName.setText(sessionManager.getUserName());
         tv_userMobile.setText(sessionManager.getUserMobile());
 
@@ -102,25 +107,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 //        }
     }
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.menu_main, menu);
-//        menuItemSync = menu.findItem(R.id.action_sync);
-//        if (visibleFragment != null && (visibleFragment.equals("StatementsFragment") || visibleFragment.equals("StatementsFragmentAdmin"))) {
-//            menuItemSync.setVisible(true);
-//        }
-
-        return true;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-        if (item.getItemId()==R.id.action_add)
-            Utils.navigateTo(context, CreateCategoryActivity.class);
-
-        return super.onOptionsItemSelected(item);
-
-    }
 
     @Override
     public boolean onSupportNavigateUp() {
@@ -132,7 +118,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
-//        switch (menuItem.getItemId()) {
+        switch (menuItem.getItemId()) {
 //            case R.id.nav_place_order:
 //                Utils.navigateTo(context, PlaceOrderActivity.class);
 //                break;
@@ -161,19 +147,18 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 //                    Utils.navigateTo(context, CrateStActivity.class);
 //                else Utils.navigateTo(context, CrateStAdminActivity.class);
 //                break;
-//            case R.id.nav_logout:
-//                new AlertDialog.Builder(context)
-//                        .setTitle("Logout")
-//                        .setMessage("Are you sure you want to logout?")
-//                        .setPositiveButton("Logout", ((dialogInterface, i) -> {
-//                            sessionManager.clearSharedPref(); //del pref data
-//                            SQLiteHelper.deleteSQLiteDB(context); //del local DB
-//                            Utils.navigateClearTo(context, LoginActivity.class);
-//                        }))
-//                        .setNegativeButton("No", null)
-//                        .show();
-//                break;
-//        }
+            case R.id.nav_logout:
+                new AlertDialog.Builder(context)
+                        .setTitle("Logout")
+                        .setMessage("Are you sure you want to logout?")
+                        .setPositiveButton("Logout", ((dialogInterface, i) -> {
+                            sessionManager.clearSharedPref(); //del pref data
+                            Utils.navigateClearTo(context, LoginActivity.class);
+                        }))
+                        .setNegativeButton("No", null)
+                        .show();
+                break;
+        }
 
 
         return true;

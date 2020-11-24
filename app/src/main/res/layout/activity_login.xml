@@ -40,6 +40,7 @@
                     android:text="Username"
                     android:textColor="@color/colorPrimary"
                     android:textSize="@dimen/size_large"
+                    android:fontFamily="@font/balsamiq_sans_regular"
                    />
 
                 <EditText
@@ -52,7 +53,8 @@
                     android:imeOptions="actionNext"
                     android:background="@null"
                     android:textSize="@dimen/size_large"
-                  />
+                    android:fontFamily="@font/balsamiq_sans_regular"
+                    />
             </LinearLayout>
 
             <View
@@ -79,6 +81,7 @@
                     android:text="Password"
                     android:textColor="@color/colorPrimary"
                     android:textSize="@dimen/size_large"
+                    android:fontFamily="@font/balsamiq_sans_regular"
                     />
 
                 <EditText
@@ -91,6 +94,7 @@
                     android:imeOptions="actionDone"
                     android:background="@null"
                     android:textSize="@dimen/size_large"
+                    android:fontFamily="@font/balsamiq_sans_regular"
                     />
             </LinearLayout>
 
@@ -126,7 +130,9 @@
                 android:textSize="@dimen/size_normal"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Admin"/>
+                android:text="Admin"
+                android:fontFamily="@font/balsamiq_sans_regular"
+                />
 
             <RadioButton
                 android:id="@+id/radio_customer"
@@ -136,7 +142,9 @@
                 android:textSize="@dimen/size_normal"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Customer"/>
+                android:text="Customer"
+                android:fontFamily="@font/balsamiq_sans_regular"
+                />
 
         </RadioGroup>
 
@@ -152,7 +160,8 @@
             android:paddingRight="@dimen/_50sdp"
             android:text="LOGIN"
             android:textColor="@color/colorWhite"
-            android:textStyle="bold" />
+            android:fontFamily="@font/balsamiq_sans_bold"
+            />
 
 
         <LinearLayout
@@ -165,6 +174,7 @@
                 android:layout_height="wrap_content"
                 android:text="Forgot your password? "
                 android:textSize="@dimen/size_normal"
+                android:fontFamily="@font/balsamiq_sans_regular"
                 />
 
             <TextView
@@ -175,6 +185,7 @@
                 android:layout_height="wrap_content"
                 android:text="Reset Here"
                 android:textSize="@dimen/size_normal"
+                android:fontFamily="@font/balsamiq_sans_italic"
                 />
         </LinearLayout>
     </LinearLayout>

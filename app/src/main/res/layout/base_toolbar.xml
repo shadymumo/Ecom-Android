@@ -17,7 +17,7 @@
         android:layout_gravity="center"
         android:textColor="@android:color/white"
         android:textSize="@dimen/_16sdp"
-        android:textStyle="bold"
+        android:fontFamily="@font/balsamiq_sans_bold"
         />
 </androidx.appcompat.widget.Toolbar>
 

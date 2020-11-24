@@ -23,8 +23,9 @@ public class SplashActivity extends AppCompatActivity {
         Utils.setToFullScreen(this);
         setContentView(R.layout.activity_splash);
 
-        Utils.navigateTo(this, LoginActivity.class); finish();
-//        delayScreen();
+//        sessionManager.setFirmId("1");
+//        Utils.navigateTo(this, MainActivity.class); finish();
+        delayScreen();
     }
 
     @SuppressLint("NewApi")

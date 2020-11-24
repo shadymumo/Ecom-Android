@@ -5,15 +5,14 @@
     android:layout_width="match_parent"
     android:orientation="vertical"
     android:elevation="@dimen/elevation"
-    app:cardCornerRadius="@dimen/_5sdp"
+    app:cardCornerRadius="@dimen/_2sdp"
     android:layout_height="wrap_content"
-    android:layout_margin="@dimen/_2sdp"
+    android:layout_margin="@dimen/_4sdp"
+    android:id="@+id/catItem_layout"
     >
 
-
-
     <RelativeLayout
-        android:padding="@dimen/_5sdp"
+        android:padding="@dimen/_10sdp"
         android:id="@+id/layout_item"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -21,7 +20,7 @@
         <androidx.appcompat.widget.AppCompatImageView
             android:layout_alignParentStart="true"
             android:layout_centerInParent="true"
-            android:id="@+id/orderItem_img"
+            android:id="@+id/catItem_img"
             android:layout_width="@dimen/_50sdp"
             android:layout_height="@dimen/_50sdp"
             app:srcCompat="@drawable/ic_launcher_background"/>
@@ -29,31 +28,45 @@
         <LinearLayout
             android:layout_marginStart="@dimen/_10sdp"
             android:layout_centerInParent="true"
-            android:layout_toEndOf="@+id/orderItem_img"
+            android:layout_toEndOf="@+id/catItem_img"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
 
         <TextView
-            android:id="@+id/orderItem_name"
+            android:id="@+id/catItem_name"
             android:textColor="@color/colorBlack"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Item Name"
             android:textSize="@dimen/size_normal"
+            android:fontFamily="@font/balsamiq_sans_regular"
             />
 
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
 
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Products: "
+                android:textSize="@dimen/size_mini"
+                android:fontFamily="@font/balsamiq_sans_bold"
+                />
         <TextView
             android:layout_width="wrap_content"
-            android:id="@+id/orderItem_qty"
+            android:id="@+id/catItem_products"
             android:layout_height="wrap_content"
-            android:text="Product name"
+            android:text="Producs"
             android:textSize="@dimen/size_mini"
+            android:fontFamily="@font/balsamiq_sans_regular"
             />
 
+        </LinearLayout>
             <LinearLayout
                 android:layout_marginTop="@dimen/_5sdp"
                 android:layout_width="match_parent"
@@ -61,18 +74,19 @@
                 android:orientation="horizontal">
 
                 <TextView
-                    android:id="@+id/orderItem_totalAmt"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Status: "
                     android:textSize="@dimen/size_mini"
+                    android:fontFamily="@font/balsamiq_sans_bold"
                     />
                 <TextView
-                    android:id="@+id/orderItem_totalAmt"
+                    android:id="@+id/catItem_status"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Success"
                     android:textSize="@dimen/size_mini"
+                    android:fontFamily="@font/balsamiq_sans_regular"
                     />
             </LinearLayout>
 
