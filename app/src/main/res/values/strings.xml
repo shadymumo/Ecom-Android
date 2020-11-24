@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">Ecom</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">V0.1</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_categories">Categories</string>
+    <string name="menu_items">Items</string>
+    <string name="menu_profile">Profile</string>
+    <string name="menu_cart">My Cart</string>
+    <string name="menu_banner">Banner</string>
+    <string name="action_search_cat">Search Category</string>
+    <string name="str_incorrect">incorrect</string>
+    <string name="action_share">Share</string>
+    <string name="INR_symbol">₹</string>
+    <string name="action_search">Search</string>
+    <string name="str_search_by_anything">Search Category</string>
+    <string name="action_add">Add</string>
+    <string name="action_sync">Sync</string>
+    <string name="str_unable_to_resolve_host">Unable to resolve host</string>
+    <string name="str_no_internet">No Internet Connection</string>
+
+</resources>
